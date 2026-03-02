@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01ADC61BF643736A8B6D2FC2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998E1B90E4B80E2115F0D1A9 /* Question.swift */; };
+		0941DCF61B860AE49BD86E87 /* ProgressSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA631B90DF9EC5259B58B939 /* ProgressSummaryView.swift */; };
+		13648BFC59C53083E22B3E9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CECDFB322C0BA6E0F1D264 /* ContentView.swift */; };
+		1868BD68EDBAD8C2040E723B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78088AED1D4CB4546E4DFB7 /* UserSettings.swift */; };
+		1D7D5910861E524CF406F196 /* FlashcardDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628A465224C39E9D842362A0 /* FlashcardDeckView.swift */; };
+		268F14265CA868FB0965C87A /* FederalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75588B647BD3744A64617C1 /* FederalInfo.swift */; };
+		2CFDEC99111609F922B5B019 /* QuestionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6C0940548C2D720BBE54A /* QuestionProgress.swift */; };
+		3FD0159F649FA5E4BBAAD677 /* CitizenshipTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */; };
+		533803002CE881940DB637E2 /* PracticeResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E07EF4E6B4FD6967CE196 /* PracticeResultsView.swift */; };
+		625FB48D027CA29B20FBFB11 /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B4A985C0527F733489352 /* QuestionsData.swift */; };
+		64C724B1906A4A0F3E53B36C /* StatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0066F760DDAB2F72CDBD0534 /* StatesData.swift */; };
+		653049E65E367532B758640E /* Executive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BE02741F2C9AD319A8995D /* Executive.swift */; };
+		69A078917FB008D3BE19C5F5 /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEEB643E9AE85010D86C53F /* CategoryFilterView.swift */; };
+		6C94AE7FDC640A981A34A4B3 /* Legislator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC014BCD1A2F778A4C7AB7E /* Legislator.swift */; };
+		71853FB11139A88B58FB5C29 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B528B8FA76E8F36559C98 /* InfoCardView.swift */; };
+		729952BB0D679E14298D4A14 /* FlashcardControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E7794C1D4EDCF1DC5E24FC /* FlashcardControlsView.swift */; };
+		79B5268AC0B8BAF93D19E717 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236C29A291140D5CC297849D /* ReviewListView.swift */; };
+		7C438066F5C800F25F8BCDC4 /* StateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA85CB83DB1651AC189D376 /* StateInfo.swift */; };
+		915DDF5FD014DB5939111063 /* PracticeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70146C9EE325AE0BBD2148D7 /* PracticeTestView.swift */; };
+		9292CD29A35FD41A615EDBC3 /* QuizEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8ED4BCC3E4982372881BE /* QuizEngine.swift */; };
+		931B651E23DEC498E3BB9D93 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6188A09B7819286F58A8D0 /* FlashcardView.swift */; };
+		95E10CC5C1EE305A31022064 /* SemanticMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B686C22149CCE748DD8F1B /* SemanticMatcher.swift */; };
+		9C8FE287D34322C89A047589 /* FederalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE763D868F32833214BF7314 /* FederalData.swift */; };
+		B746D8DE33AB1FD234C14597 /* ReviewQuestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E721DE21BCFDFB0660B9EA /* ReviewQuestionRow.swift */; };
+		BE5DFF39631A85729CCC1E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA61DAC612C6A2591CA4C265 /* Assets.xcassets */; };
+		C19BFDED22505754CDEE0162 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD31D7754F174FF01A4806 /* HomeView.swift */; };
+		C3C427C854FB38612028B9D8 /* PracticeQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4943128E9EEA01F0A00439 /* PracticeQuestionView.swift */; };
+		D2F18588733CD751B878634A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FDF8DF37BB2DB3EBB755F /* Category.swift */; };
+		DE8100A14CD30691C6280720 /* String+FuzzyMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EE8529358FC348A8D8748 /* String+FuzzyMatch.swift */; };
+		E4BFDB210513CD50A4DE4E7E /* ProgressTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED0F8790AAF2A89A394BF3 /* ProgressTracker.swift */; };
+		EA6371BAF82723C42B4A1488 /* LegislatorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D84C12F774CCA06668EE06 /* LegislatorStore.swift */; };
+		EB19CC5CCD8F63A5F23D51BD /* AnswerMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD397CA2DE91645DF75D15D /* AnswerMatcher.swift */; };
+		FE0EA6372B3A0A137272CF1F /* DistrictResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90A1D2E27BADEDF076E036 /* DistrictResolver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0066F760DDAB2F72CDBD0534 /* StatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesData.swift; sourceTree = "<group>"; };
+		06E7794C1D4EDCF1DC5E24FC /* FlashcardControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardControlsView.swift; sourceTree = "<group>"; };
+		07A8ED4BCC3E4982372881BE /* QuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
+		09BE02741F2C9AD319A8995D /* Executive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executive.swift; sourceTree = "<group>"; };
+		236C29A291140D5CC297849D /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		32CECDFB322C0BA6E0F1D264 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FC014BCD1A2F778A4C7AB7E /* Legislator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legislator.swift; sourceTree = "<group>"; };
+		4E7EE8529358FC348A8D8748 /* String+FuzzyMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FuzzyMatch.swift"; sourceTree = "<group>"; };
+		5BA85CB83DB1651AC189D376 /* StateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfo.swift; sourceTree = "<group>"; };
+		628A465224C39E9D842362A0 /* FlashcardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardDeckView.swift; sourceTree = "<group>"; };
+		6C5B4A985C0527F733489352 /* QuestionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsData.swift; sourceTree = "<group>"; };
+		6D2FDF8DF37BB2DB3EBB755F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		70146C9EE325AE0BBD2148D7 /* PracticeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTestView.swift; sourceTree = "<group>"; };
+		71E721DE21BCFDFB0660B9EA /* ReviewQuestionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewQuestionRow.swift; sourceTree = "<group>"; };
+		7CEEB643E9AE85010D86C53F /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
+		8106D5A60C426AC0FEF16207 /* CitizenshipTest.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CitizenshipTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D90A1D2E27BADEDF076E036 /* DistrictResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictResolver.swift; sourceTree = "<group>"; };
+		936B528B8FA76E8F36559C98 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
+		998E1B90E4B80E2115F0D1A9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9AD397CA2DE91645DF75D15D /* AnswerMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerMatcher.swift; sourceTree = "<group>"; };
+		A2B686C22149CCE748DD8F1B /* SemanticMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticMatcher.swift; sourceTree = "<group>"; };
+		A6D84C12F774CCA06668EE06 /* LegislatorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegislatorStore.swift; sourceTree = "<group>"; };
+		A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenshipTestApp.swift; sourceTree = "<group>"; };
+		AA6188A09B7819286F58A8D0 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		B3BD31D7754F174FF01A4806 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BA631B90DF9EC5259B58B939 /* ProgressSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSummaryView.swift; sourceTree = "<group>"; };
+		C78088AED1D4CB4546E4DFB7 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		D75588B647BD3744A64617C1 /* FederalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FederalInfo.swift; sourceTree = "<group>"; };
+		D8ED0F8790AAF2A89A394BF3 /* ProgressTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTracker.swift; sourceTree = "<group>"; };
+		DF4EBAAEDF68C94E29ED3EA8 /* CitizenshipTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CitizenshipTest.entitlements; sourceTree = "<group>"; };
+		EA61DAC612C6A2591CA4C265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE763D868F32833214BF7314 /* FederalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FederalData.swift; sourceTree = "<group>"; };
+		F0D6C0940548C2D720BBE54A /* QuestionProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProgress.swift; sourceTree = "<group>"; };
+		F92E07EF4E6B4FD6967CE196 /* PracticeResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeResultsView.swift; sourceTree = "<group>"; };
+		FB4943128E9EEA01F0A00439 /* PracticeQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		086BEE633246279B4FBB0326 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD44D40D16CDEDEA073FF74B /* Components */,
+				923F0AF80EB84DE6017A6163 /* Flashcards */,
+				D0963161E99A4FA0EDA97810 /* Home */,
+				6320F4BBFA8596EA8D544632 /* PracticeTest */,
+				D0B576754C7C05740D129EC9 /* Review */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58673C43DC849CA2083A507A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6320F4BBFA8596EA8D544632 /* PracticeTest */ = {
+			isa = PBXGroup;
+			children = (
+				FB4943128E9EEA01F0A00439 /* PracticeQuestionView.swift */,
+				F92E07EF4E6B4FD6967CE196 /* PracticeResultsView.swift */,
+				70146C9EE325AE0BBD2148D7 /* PracticeTestView.swift */,
+			);
+			path = PracticeTest;
+			sourceTree = "<group>";
+		};
+		7FFB70AA93935AFF2BD1DDF7 = {
+			isa = PBXGroup;
+			children = (
+				AFE0BA585094A35CE7098C31 /* CitizenshipTest */,
+				B504381BC1D68FF802AA340E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9051DC0BDED61B925E6E0906 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FDF8DF37BB2DB3EBB755F /* Category.swift */,
+				09BE02741F2C9AD319A8995D /* Executive.swift */,
+				D75588B647BD3744A64617C1 /* FederalInfo.swift */,
+				3FC014BCD1A2F778A4C7AB7E /* Legislator.swift */,
+				998E1B90E4B80E2115F0D1A9 /* Question.swift */,
+				F0D6C0940548C2D720BBE54A /* QuestionProgress.swift */,
+				5BA85CB83DB1651AC189D376 /* StateInfo.swift */,
+				C78088AED1D4CB4546E4DFB7 /* UserSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		923F0AF80EB84DE6017A6163 /* Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+				06E7794C1D4EDCF1DC5E24FC /* FlashcardControlsView.swift */,
+				628A465224C39E9D842362A0 /* FlashcardDeckView.swift */,
+				AA6188A09B7819286F58A8D0 /* FlashcardView.swift */,
+			);
+			path = Flashcards;
+			sourceTree = "<group>";
+		};
+		A7A8B8EED587CF65EFEA8A2C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE763D868F32833214BF7314 /* FederalData.swift */,
+				6C5B4A985C0527F733489352 /* QuestionsData.swift */,
+				0066F760DDAB2F72CDBD0534 /* StatesData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AFE0BA585094A35CE7098C31 /* CitizenshipTest */ = {
+			isa = PBXGroup;
+			children = (
+				DF4EBAAEDF68C94E29ED3EA8 /* CitizenshipTest.entitlements */,
+				A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */,
+				32CECDFB322C0BA6E0F1D264 /* ContentView.swift */,
+				A7A8B8EED587CF65EFEA8A2C /* Data */,
+				EF7FBC0A1C8352FC6F8D1F3F /* Extensions */,
+				9051DC0BDED61B925E6E0906 /* Models */,
+				ED85209E2581C89A3EB3753E /* Resources */,
+				D849FAB9DBB9D186EFD18A18 /* Services */,
+				086BEE633246279B4FBB0326 /* Views */,
+			);
+			path = CitizenshipTest;
+			sourceTree = "<group>";
+		};
+		B504381BC1D68FF802AA340E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8106D5A60C426AC0FEF16207 /* CitizenshipTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0963161E99A4FA0EDA97810 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B3BD31D7754F174FF01A4806 /* HomeView.swift */,
+				BA631B90DF9EC5259B58B939 /* ProgressSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D0B576754C7C05740D129EC9 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				236C29A291140D5CC297849D /* ReviewListView.swift */,
+				71E721DE21BCFDFB0660B9EA /* ReviewQuestionRow.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		D849FAB9DBB9D186EFD18A18 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9AD397CA2DE91645DF75D15D /* AnswerMatcher.swift */,
+				8D90A1D2E27BADEDF076E036 /* DistrictResolver.swift */,
+				A6D84C12F774CCA06668EE06 /* LegislatorStore.swift */,
+				D8ED0F8790AAF2A89A394BF3 /* ProgressTracker.swift */,
+				07A8ED4BCC3E4982372881BE /* QuizEngine.swift */,
+				A2B686C22149CCE748DD8F1B /* SemanticMatcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED85209E2581C89A3EB3753E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA61DAC612C6A2591CA4C265 /* Assets.xcassets */,
+				58673C43DC849CA2083A507A /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF7FBC0A1C8352FC6F8D1F3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EE8529358FC348A8D8748 /* String+FuzzyMatch.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD44D40D16CDEDEA073FF74B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7CEEB643E9AE85010D86C53F /* CategoryFilterView.swift */,
+				936B528B8FA76E8F36559C98 /* InfoCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE9328FFA861B5F83F42F337 /* CitizenshipTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FADD5C96D1AB80EB93C2B4E4 /* Build configuration list for PBXNativeTarget "CitizenshipTest" */;
+			buildPhases = (
+				66856E2B11C656510E8E3B66 /* Sources */,
+				77A180C813519F5A50BA0462 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CitizenshipTest;
+			packageProductDependencies = (
+			);
+			productName = CitizenshipTest;
+			productReference = 8106D5A60C426AC0FEF16207 /* CitizenshipTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53BF6D3920DD938B89CFD707 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = B4DA36858D2545C2FF6EADAC /* Build configuration list for PBXProject "CitizenshipTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7FFB70AA93935AFF2BD1DDF7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE9328FFA861B5F83F42F337 /* CitizenshipTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77A180C813519F5A50BA0462 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5DFF39631A85729CCC1E15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66856E2B11C656510E8E3B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB19CC5CCD8F63A5F23D51BD /* AnswerMatcher.swift in Sources */,
+				D2F18588733CD751B878634A /* Category.swift in Sources */,
+				69A078917FB008D3BE19C5F5 /* CategoryFilterView.swift in Sources */,
+				3FD0159F649FA5E4BBAAD677 /* CitizenshipTestApp.swift in Sources */,
+				13648BFC59C53083E22B3E9A /* ContentView.swift in Sources */,
+				FE0EA6372B3A0A137272CF1F /* DistrictResolver.swift in Sources */,
+				653049E65E367532B758640E /* Executive.swift in Sources */,
+				9C8FE287D34322C89A047589 /* FederalData.swift in Sources */,
+				268F14265CA868FB0965C87A /* FederalInfo.swift in Sources */,
+				729952BB0D679E14298D4A14 /* FlashcardControlsView.swift in Sources */,
+				1D7D5910861E524CF406F196 /* FlashcardDeckView.swift in Sources */,
+				931B651E23DEC498E3BB9D93 /* FlashcardView.swift in Sources */,
+				C19BFDED22505754CDEE0162 /* HomeView.swift in Sources */,
+				71853FB11139A88B58FB5C29 /* InfoCardView.swift in Sources */,
+				6C94AE7FDC640A981A34A4B3 /* Legislator.swift in Sources */,
+				EA6371BAF82723C42B4A1488 /* LegislatorStore.swift in Sources */,
+				C3C427C854FB38612028B9D8 /* PracticeQuestionView.swift in Sources */,
+				533803002CE881940DB637E2 /* PracticeResultsView.swift in Sources */,
+				915DDF5FD014DB5939111063 /* PracticeTestView.swift in Sources */,
+				0941DCF61B860AE49BD86E87 /* ProgressSummaryView.swift in Sources */,
+				E4BFDB210513CD50A4DE4E7E /* ProgressTracker.swift in Sources */,
+				01ADC61BF643736A8B6D2FC2 /* Question.swift in Sources */,
+				2CFDEC99111609F922B5B019 /* QuestionProgress.swift in Sources */,
+				625FB48D027CA29B20FBFB11 /* QuestionsData.swift in Sources */,
+				9292CD29A35FD41A615EDBC3 /* QuizEngine.swift in Sources */,
+				79B5268AC0B8BAF93D19E717 /* ReviewListView.swift in Sources */,
+				B746D8DE33AB1FD234C14597 /* ReviewQuestionRow.swift in Sources */,
+				95E10CC5C1EE305A31022064 /* SemanticMatcher.swift in Sources */,
+				7C438066F5C800F25F8BCDC4 /* StateInfo.swift in Sources */,
+				64C724B1906A4A0F3E53B36C /* StatesData.swift in Sources */,
+				DE8100A14CD30691C6280720 /* String+FuzzyMatch.swift in Sources */,
+				1868BD68EDBAD8C2040E723B /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		25D6F3115C5992CAC3E835B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26DA248388F119C1A2A53B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CitizenshipTest/CitizenshipTest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to determine your congressional district for practice questions";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.citizenshiptest.app;
+				PRODUCT_NAME = "Citizenship Test";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5AECB8822580230738255E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D5768C3805EE935F74599751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CitizenshipTest/CitizenshipTest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to determine your congressional district for practice questions";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.citizenshiptest.app;
+				PRODUCT_NAME = "Citizenship Test";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4DA36858D2545C2FF6EADAC /* Build configuration list for PBXProject "CitizenshipTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25D6F3115C5992CAC3E835B0 /* Debug */,
+				5AECB8822580230738255E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FADD5C96D1AB80EB93C2B4E4 /* Build configuration list for PBXNativeTarget "CitizenshipTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5768C3805EE935F74599751 /* Debug */,
+				26DA248388F119C1A2A53B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53BF6D3920DD938B89CFD707 /* Project object */;
+}
