@@ -98,8 +98,9 @@ struct AnswerMatcher {
         // Abbreviation expansion
         var expandedUser = cleanUser
         for (abbrev, full) in abbreviations {
+            let escapedAbbrev = NSRegularExpression.escapedPattern(for: abbrev)
             expandedUser = expandedUser.replacingOccurrences(
-                of: "\\b\(abbrev)\\b",
+                of: "\\b\(escapedAbbrev)\\b",
                 with: full,
                 options: .regularExpression
             )

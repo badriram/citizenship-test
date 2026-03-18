@@ -81,7 +81,10 @@ final class DistrictResolver: NSObject {
             URLQueryItem(name: "format", value: "json"),
         ]
 
-        let (data, _) = try await URLSession.shared.data(from: components.url!)
+        let (data, response) = try await URLSession.shared.data(from: components.url!)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw URLError(.badServerResponse)
+        }
         return try parseDistrictResponse(data)
     }
 

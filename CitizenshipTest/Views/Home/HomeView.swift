@@ -37,15 +37,19 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 // Header
                 VStack(spacing: 8) {
-                    Text("US Citizenship Test 2025")
+                    Text("CitizenReady")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
 
+                    Text("US Citizenship Test Prep")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+
                     if let state = selectedState {
                         Text("\(state.name) Edition")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
                     }
                 }
                 .padding(.top)
@@ -260,7 +264,7 @@ struct HomeView: View {
                 }
                 .font(.caption)
                 .fontWeight(.medium)
-                .disabled(zipCode.count < 5 || districtResolver.isResolving)
+                .disabled(!isValidZIP(zipCode) || districtResolver.isResolving)
             }
 
             if districtResolver.locationPermissionDenied {
@@ -374,6 +378,12 @@ struct HomeView: View {
         s.districtResolutionMethod = nil
         try? modelContext.save()
         zipCode = ""
+    }
+
+    // MARK: - Validation
+
+    private func isValidZIP(_ zip: String) -> Bool {
+        zip.count == 5 && zip.allSatisfy(\.isNumber)
     }
 
     // MARK: - Helpers

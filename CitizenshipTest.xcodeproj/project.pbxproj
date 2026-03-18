@@ -263,9 +263,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					DE9328FFA861B5F83F42F337 = {
+						DevelopmentTeam = KY478X48U7;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = B4DA36858D2545C2FF6EADAC /* Build configuration list for PBXProject "CitizenshipTest" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -275,6 +280,7 @@
 			mainGroup = 7FFB70AA93935AFF2BD1DDF7;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
+			productRefGroup = B504381BC1D68FF802AA340E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -408,7 +414,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CitizenshipTest/CitizenshipTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KY478X48U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to determine your congressional district for practice questions";
@@ -422,8 +430,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.citizenshiptest.app;
-				PRODUCT_NAME = "Citizenship Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.badriram.citizenready;
+				PRODUCT_NAME = "US Civics Ready";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -494,7 +502,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CitizenshipTest/CitizenshipTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KY478X48U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to determine your congressional district for practice questions";
@@ -508,8 +518,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.citizenshiptest.app;
-				PRODUCT_NAME = "Citizenship Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.badriram.citizenready;
+				PRODUCT_NAME = "US Civics Ready";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

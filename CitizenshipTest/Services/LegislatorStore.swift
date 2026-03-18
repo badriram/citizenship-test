@@ -133,6 +133,10 @@ final class LegislatorStore {
         let cacheDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         let fileURL = cacheDir.appendingPathComponent(cacheFileName)
         try data.write(to: fileURL, options: .atomic)
+        try FileManager.default.setAttributes(
+            [.protectionKey: FileProtectionType.complete],
+            ofItemAtPath: fileURL.path
+        )
     }
 
     private func cachedFileURL(named name: String) -> URL? {
