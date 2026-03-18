@@ -37,7 +37,7 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 // Header
                 VStack(spacing: 8) {
-                    Text("CitizenReady")
+                    Text("US Civics Ready")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
