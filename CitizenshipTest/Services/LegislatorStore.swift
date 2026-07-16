@@ -14,6 +14,10 @@ final class LegislatorStore {
     private static let executiveURL = URL(string: "https://unitedstates.github.io/congress-legislators/executive.json")!
     private static let staleDays = 14
 
+    // Single in-flight refresh, so rapid successive callers coalesce onto one
+    // download instead of each starting their own.
+    @ObservationIgnored private var refreshTask: Task<Void, Never>?
+
     // MARK: - Public API
 
     func loadBundled() {
@@ -27,7 +31,23 @@ final class LegislatorStore {
 
     @MainActor
     func refreshIfNeeded() async {
+        // Join an already-running refresh rather than launching a duplicate.
+        if let inFlight = refreshTask {
+            await inFlight.value
+            return
+        }
         guard shouldRefresh else { return }
+
+        let task = Task { @MainActor in
+            await performRefresh()
+        }
+        refreshTask = task
+        await task.value
+        refreshTask = nil
+    }
+
+    @MainActor
+    private func performRefresh() async {
         isLoading = true
         loadError = nil
         defer { isLoading = false }
