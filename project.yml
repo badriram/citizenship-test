@@ -28,6 +28,7 @@ targets:
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
@@ -45,6 +46,9 @@ targets:
         OTHER_LDFLAGS: "-weak_framework FoundationModels"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: KY478X48U7
+    scheme:
+      testTargets:
+        - CitizenshipTestUITests
     entitlements:
       path: CitizenshipTest/CitizenshipTest.entitlements
       properties:
@@ -53,3 +57,18 @@ targets:
         com.apple.developer.icloud-services:
           - CloudKit
         com.apple.developer.ubiquity-kvstore-identifier: "$(TeamIdentifierPrefix)$(CFBundleIdentifier)"
+
+  CitizenshipTestUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: CitizenshipTestUITests
+    dependencies:
+      - target: CitizenshipTest
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.badriram.citizenready.uitests
+        TEST_TARGET_NAME: CitizenshipTest
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: KY478X48U7

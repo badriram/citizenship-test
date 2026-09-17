@@ -14,6 +14,7 @@
 		1D7D5910861E524CF406F196 /* FlashcardDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628A465224C39E9D842362A0 /* FlashcardDeckView.swift */; };
 		268F14265CA868FB0965C87A /* FederalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75588B647BD3744A64617C1 /* FederalInfo.swift */; };
 		2CFDEC99111609F922B5B019 /* QuestionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6C0940548C2D720BBE54A /* QuestionProgress.swift */; };
+		32E8CFCF098FD0CECF2B7827 /* PracticeTestFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED23D798B97F738F3BA72D1 /* PracticeTestFlowUITests.swift */; };
 		3FD0159F649FA5E4BBAAD677 /* CitizenshipTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */; };
 		4A44DFE87CEE56BB75482801 /* AIAnswerGrader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804887D7C8B0F398F8AE7FC /* AIAnswerGrader.swift */; };
 		533803002CE881940DB637E2 /* PracticeResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E07EF4E6B4FD6967CE196 /* PracticeResultsView.swift */; };
@@ -43,11 +44,22 @@
 		FE0EA6372B3A0A137272CF1F /* DistrictResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90A1D2E27BADEDF076E036 /* DistrictResolver.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		970939A6B8A8B9FBF43DEE57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53BF6D3920DD938B89CFD707 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9328FFA861B5F83F42F337;
+			remoteInfo = CitizenshipTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0066F760DDAB2F72CDBD0534 /* StatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesData.swift; sourceTree = "<group>"; };
 		06E7794C1D4EDCF1DC5E24FC /* FlashcardControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardControlsView.swift; sourceTree = "<group>"; };
 		07A8ED4BCC3E4982372881BE /* QuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
 		09BE02741F2C9AD319A8995D /* Executive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executive.swift; sourceTree = "<group>"; };
+		0ED23D798B97F738F3BA72D1 /* PracticeTestFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTestFlowUITests.swift; sourceTree = "<group>"; };
 		236C29A291140D5CC297849D /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		32CECDFB322C0BA6E0F1D264 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FC014BCD1A2F778A4C7AB7E /* Legislator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legislator.swift; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 		B3BD31D7754F174FF01A4806 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B804887D7C8B0F398F8AE7FC /* AIAnswerGrader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnswerGrader.swift; sourceTree = "<group>"; };
 		BA631B90DF9EC5259B58B939 /* ProgressSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSummaryView.swift; sourceTree = "<group>"; };
+		C191819B901ED2F22F6D898B /* CitizenshipTestUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CitizenshipTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78088AED1D4CB4546E4DFB7 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		D75588B647BD3744A64617C1 /* FederalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FederalInfo.swift; sourceTree = "<group>"; };
 		D8ED0F8790AAF2A89A394BF3 /* ProgressTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTracker.swift; sourceTree = "<group>"; };
@@ -116,8 +129,17 @@
 			isa = PBXGroup;
 			children = (
 				AFE0BA585094A35CE7098C31 /* CitizenshipTest */,
+				8B5F2E40A4EDA39920AEAC3A /* CitizenshipTestUITests */,
 				B504381BC1D68FF802AA340E /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		8B5F2E40A4EDA39920AEAC3A /* CitizenshipTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0ED23D798B97F738F3BA72D1 /* PracticeTestFlowUITests.swift */,
+			);
+			path = CitizenshipTestUITests;
 			sourceTree = "<group>";
 		};
 		9051DC0BDED61B925E6E0906 /* Models */ = {
@@ -175,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8106D5A60C426AC0FEF16207 /* CitizenshipTest.app */,
+				C191819B901ED2F22F6D898B /* CitizenshipTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,6 +263,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B60B1CDD476FC498FF1A692 /* CitizenshipTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93269E4F62C699200BB9D223 /* Build configuration list for PBXNativeTarget "CitizenshipTestUITests" */;
+			buildPhases = (
+				CE53F0A4F865DE2F0FF88074 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				282F9A914A2498C5CDC42FF7 /* PBXTargetDependency */,
+			);
+			name = CitizenshipTestUITests;
+			packageProductDependencies = (
+			);
+			productName = CitizenshipTestUITests;
+			productReference = C191819B901ED2F22F6D898B /* CitizenshipTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		DE9328FFA861B5F83F42F337 /* CitizenshipTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FADD5C96D1AB80EB93C2B4E4 /* Build configuration list for PBXNativeTarget "CitizenshipTest" */;
@@ -267,6 +308,11 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
+					2B60B1CDD476FC498FF1A692 = {
+						DevelopmentTeam = KY478X48U7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE9328FFA861B5F83F42F337;
+					};
 					DE9328FFA861B5F83F42F337 = {
 						DevelopmentTeam = KY478X48U7;
 						ProvisioningStyle = Automatic;
@@ -288,6 +334,7 @@
 			projectRoot = "";
 			targets = (
 				DE9328FFA861B5F83F42F337 /* CitizenshipTest */,
+				2B60B1CDD476FC498FF1A692 /* CitizenshipTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +391,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE53F0A4F865DE2F0FF88074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E8CFCF098FD0CECF2B7827 /* PracticeTestFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		282F9A914A2498C5CDC42FF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9328FFA861B5F83F42F337 /* CitizenshipTest */;
+			targetProxy = 970939A6B8A8B9FBF43DEE57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		25D6F3115C5992CAC3E835B0 /* Debug */ = {
@@ -423,6 +486,7 @@
 				DEVELOPMENT_TEAM = KY478X48U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to determine your congressional district for practice questions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -500,6 +564,25 @@
 			};
 			name = Release;
 		};
+		7B112C377F3176FE447BF7D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KY478X48U7;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.badriram.citizenready.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CitizenshipTest;
+			};
+			name = Release;
+		};
 		D5768C3805EE935F74599751 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -512,6 +595,7 @@
 				DEVELOPMENT_TEAM = KY478X48U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to determine your congressional district for practice questions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -532,9 +616,37 @@
 			};
 			name = Debug;
 		};
+		F6A6BFB692E3FCC3E6B5B597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KY478X48U7;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.badriram.citizenready.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CitizenshipTest;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		93269E4F62C699200BB9D223 /* Build configuration list for PBXNativeTarget "CitizenshipTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6A6BFB692E3FCC3E6B5B597 /* Debug */,
+				7B112C377F3176FE447BF7D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		B4DA36858D2545C2FF6EADAC /* Build configuration list for PBXProject "CitizenshipTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
