@@ -113,6 +113,20 @@ private struct ResultRow: View {
                     Text("Accepted: \(accepted.joined(separator: "; "))")
                         .font(.caption)
                         .foregroundStyle(.secondary)
+
+                    // Shown only when Apple Intelligence graded this answer.
+                    if let explanation = result.explanation {
+                        HStack(alignment: .top, spacing: 4) {
+                            Image(systemName: "sparkles")
+                                .font(.caption2)
+                                .foregroundStyle(.tint)
+                            Text(explanation)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .italic()
+                        }
+                        .padding(.top, 2)
+                    }
                 }
             }
         }

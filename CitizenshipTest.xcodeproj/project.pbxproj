@@ -15,6 +15,7 @@
 		268F14265CA868FB0965C87A /* FederalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75588B647BD3744A64617C1 /* FederalInfo.swift */; };
 		2CFDEC99111609F922B5B019 /* QuestionProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6C0940548C2D720BBE54A /* QuestionProgress.swift */; };
 		3FD0159F649FA5E4BBAAD677 /* CitizenshipTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */; };
+		4A44DFE87CEE56BB75482801 /* AIAnswerGrader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804887D7C8B0F398F8AE7FC /* AIAnswerGrader.swift */; };
 		533803002CE881940DB637E2 /* PracticeResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E07EF4E6B4FD6967CE196 /* PracticeResultsView.swift */; };
 		625FB48D027CA29B20FBFB11 /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B4A985C0527F733489352 /* QuestionsData.swift */; };
 		64C724B1906A4A0F3E53B36C /* StatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0066F760DDAB2F72CDBD0534 /* StatesData.swift */; };
@@ -68,6 +69,7 @@
 		A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenshipTestApp.swift; sourceTree = "<group>"; };
 		AA6188A09B7819286F58A8D0 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		B3BD31D7754F174FF01A4806 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B804887D7C8B0F398F8AE7FC /* AIAnswerGrader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnswerGrader.swift; sourceTree = "<group>"; };
 		BA631B90DF9EC5259B58B939 /* ProgressSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSummaryView.swift; sourceTree = "<group>"; };
 		C78088AED1D4CB4546E4DFB7 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		D75588B647BD3744A64617C1 /* FederalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FederalInfo.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		D849FAB9DBB9D186EFD18A18 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B804887D7C8B0F398F8AE7FC /* AIAnswerGrader.swift */,
 				9AD397CA2DE91645DF75D15D /* AnswerMatcher.swift */,
 				8D90A1D2E27BADEDF076E036 /* DistrictResolver.swift */,
 				A6D84C12F774CCA06668EE06 /* LegislatorStore.swift */,
@@ -262,7 +265,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					DE9328FFA861B5F83F42F337 = {
 						DevelopmentTeam = KY478X48U7;
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A44DFE87CEE56BB75482801 /* AIAnswerGrader.swift in Sources */,
 				EB19CC5CCD8F63A5F23D51BD /* AnswerMatcher.swift in Sources */,
 				D2F18588733CD751B878634A /* Category.swift in Sources */,
 				69A078917FB008D3BE19C5F5 /* CategoryFilterView.swift in Sources */,
@@ -415,7 +419,7 @@
 				CODE_SIGN_ENTITLEMENTS = CitizenshipTest/CitizenshipTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KY478X48U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -429,7 +433,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = "-weak_framework FoundationModels";
 				PRODUCT_BUNDLE_IDENTIFIER = com.badriram.citizenready;
 				PRODUCT_NAME = "US Civics Ready";
 				SDKROOT = iphoneos;
@@ -503,7 +508,7 @@
 				CODE_SIGN_ENTITLEMENTS = CitizenshipTest/CitizenshipTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KY478X48U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -517,7 +522,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = "-weak_framework FoundationModels";
 				PRODUCT_BUNDLE_IDENTIFIER = com.badriram.citizenready;
 				PRODUCT_NAME = "US Civics Ready";
 				SDKROOT = iphoneos;

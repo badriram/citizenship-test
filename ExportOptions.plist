@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>method</key>
+	<string>app-store-connect</string>
+	<key>teamID</key>
+	<string>KY478X48U7</string>
+	<key>uploadSymbols</key>
+	<true/>
+	<!-- Manual, deliberately — same reasoning as FlockCast. Automatic signing asks
+	     Xcode for an account and xcodebuild reports "No Accounts" even when Xcode's
+	     UI shows one signed in; the two read different stores. Naming the certificate
+	     and profile removes that dependency: signing uses what is in the keychain and
+	     the profile directory, both checked before the archive starts.
+	     Profile created by Tools/asc/profile.py; recreate it if the App ID's
+	     capabilities change, since a profile is a snapshot and cannot be edited. -->
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>signingCertificate</key>
+	<string>Apple Distribution</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.badriram.citizenready</key>
+		<string>CitizenReady AppStore</string>
+	</dict>
+	<key>destination</key>
+	<string>export</string>
+</dict>
+</plist>

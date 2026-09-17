@@ -106,6 +106,8 @@ struct HomeView: View {
             }
             .padding(.horizontal)
             .padding(.bottom, 40)
+            .frame(maxWidth: 600)
+            .frame(maxWidth: .infinity)
         }
         .onAppear {
             _ = ensureSettings()
@@ -122,9 +124,9 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 12) {
                     Divider()
 
-                    if hasResolvedLocation {
-                        // Location is resolved — show state & district inline
-                        resolvedLocationSection
+                    if selectedState != nil {
+                        // State is set — show compact display
+                        selectedLocationSection
 
                         HStack {
                             Spacer()
@@ -136,7 +138,7 @@ struct HomeView: View {
                             }
                         }
                     } else {
-                        // No location yet — show location finder + state fallback
+                        // No location yet — show location finder
                         locationFinderSection
                     }
 
@@ -190,12 +192,11 @@ struct HomeView: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 
-    // MARK: - Resolved Location (compact display)
+    // MARK: - Selected Location (compact display)
 
     @ViewBuilder
-    private var resolvedLocationSection: some View {
-        if let stateCode = districtResolver.resolvedState,
-           let state = statesData.first(where: { $0.id == stateCode }) {
+    private var selectedLocationSection: some View {
+        if let state = selectedState {
             HStack(spacing: 8) {
                 Image(systemName: "mappin.circle.fill")
                     .foregroundStyle(.green)
@@ -204,7 +205,7 @@ struct HomeView: View {
                     Text(state.name)
                         .font(.subheadline)
                         .fontWeight(.medium)
-                    if let district = districtResolver.resolvedDistrict {
+                    if let district = settings.selectedDistrict {
                         Text(district == 0 ? "At-Large District" : "District \(district)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -279,27 +280,47 @@ struct HomeView: View {
                     .foregroundStyle(.red)
             }
 
-            // Manual state picker as fallback
-            HStack {
-                Image(systemName: "mappin.circle.fill")
-                    .foregroundStyle(.red)
-                    .font(.caption)
-                Text("Or select state manually")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Picker("State", selection: Binding(
-                    get: { settings.selectedStateId },
-                    set: { newValue in
-                        ensureSettings().selectedStateId = newValue
-                        try? modelContext.save()
-                    }
-                )) {
-                    ForEach(statesData) { state in
-                        Text(state.name).tag(state.id)
-                    }
+            Divider()
+                .padding(.vertical, 2)
+
+            // Manual state selection — a peer option, not just a fallback.
+            // Works fully offline and sends nothing to CoreLocation or the
+            // Census API, so a privacy-conscious user never has to share a
+            // location or ZIP to study state-specific questions.
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(spacing: 4) {
+                    Image(systemName: "hand.raised.fill")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                    Text("Prefer not to share your location?")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
                 }
-                .pickerStyle(.menu)
+
+                HStack {
+                    Text("Pick your state")
+                        .font(.caption)
+                    Spacer()
+                    Picker("State", selection: Binding(
+                        get: { settings.selectedStateId },
+                        set: { newValue in
+                            let s = ensureSettings()
+                            s.selectedStateId = newValue
+                            // A manually chosen state has no district; clear any
+                            // stale value so the representative question doesn't
+                            // show a district the user never selected.
+                            s.selectedDistrict = nil
+                            s.districtResolutionMethod = newValue.isEmpty ? nil : "manual"
+                            try? modelContext.save()
+                        }
+                    )) {
+                        Text("Select…").tag("")
+                        ForEach(statesData) { state in
+                            Text(state.name).tag(state.id)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                }
             }
         }
     }
@@ -374,6 +395,7 @@ struct HomeView: View {
     private func clearLocation() {
         districtResolver.clear()
         let s = ensureSettings()
+        s.selectedStateId = ""
         s.selectedDistrict = nil
         s.districtResolutionMethod = nil
         try? modelContext.save()

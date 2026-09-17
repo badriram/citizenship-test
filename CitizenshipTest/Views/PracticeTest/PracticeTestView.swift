@@ -79,16 +79,27 @@ struct PracticeTestView: View {
 
                 if engine.currentIndex == QuizEngine.totalQuestions - 1 {
                     Button {
-                        engine.finishTest()
-                        recordResults(engine)
+                        Task {
+                            await engine.finishTest()
+                            recordResults(engine)
 
-                        let generator = UINotificationFeedbackGenerator()
-                        generator.notificationOccurred(engine.isPassing ? .success : .warning)
+                            let generator = UINotificationFeedbackGenerator()
+                            generator.notificationOccurred(engine.isPassing ? .success : .warning)
+                        }
                     } label: {
-                        Label("Submit Test", systemImage: "checkmark.circle.fill")
+                        if engine.isGrading {
+                            HStack(spacing: 8) {
+                                ProgressView()
+                                Text("Grading \(engine.gradedCount)/\(QuizEngine.totalQuestions)")
+                            }
                             .fontWeight(.semibold)
+                        } else {
+                            Label("Submit Test", systemImage: "checkmark.circle.fill")
+                                .fontWeight(.semibold)
+                        }
                     }
                     .tint(.green)
+                    .disabled(engine.isGrading)
                 } else {
                     Button {
                         engine.nextQuestion()
@@ -103,6 +114,8 @@ struct PracticeTestView: View {
 
     private func startNewTest() {
         engine = QuizEngine(state: selectedState, legislatorStore: legislatorStore, district: selectedDistrict)
+        // Warm the model now so the first background grading is fast.
+        engine?.prepareGrading()
     }
 
     private func recordResults(_ engine: QuizEngine) {

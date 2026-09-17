@@ -2,3 +2,8 @@
 xcuserdata/
 DerivedData/
 *.xcuserstate
+.release.env
+build/
+*.xcarchive
+*.ipa
+__pycache__/
