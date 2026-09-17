@@ -123,7 +123,9 @@ final class QuizEngine {
 
         // Most answers were graded in the background while the user worked.
         // Only wait on whatever is still in flight.
-        let pending = gradingTasks.values
+        // Snapshot into an array: `.values` is a lazy view, and each task clears its
+        // own entry on completion — mutating the dictionary while we await across it.
+        let pending = Array(gradingTasks.values)
         isGrading = useAI && !pending.isEmpty
         gradedCount = useAI ? max(0, answeredCount - pending.count) : 0
         gradedByAI = false
