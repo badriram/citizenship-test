@@ -52,6 +52,25 @@ struct PracticeResultsView: View {
                         .font(.headline)
                         .padding(.horizontal)
 
+                    // Say plainly where the explanations came from. Without this the
+                    // italic notes read as the app's own authority rather than a
+                    // model's, and a device with no Apple Intelligence just silently
+                    // shows fewer of them.
+                    if engine.gradedByAI {
+                        Label(
+                            "Answers checked with Apple Intelligence on this iPhone. Explanations are AI-generated and can be wrong.",
+                            systemImage: "sparkles"
+                        )
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal)
+                    } else if let reason = AIAnswerGrader.unavailableReason {
+                        Label(reason, systemImage: "info.circle")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .padding(.horizontal)
+                    }
+
                     ForEach(engine.results) { result in
                         ResultRow(result: result, selectedState: selectedState, legislatorStore: legislatorStore, district: district)
                     }
