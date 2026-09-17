@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct PracticeResultsView: View {
+    @Environment(\.dismiss) private var dismiss
     let engine: QuizEngine
     let selectedState: StateInfo?
     let legislatorStore: LegislatorStore?
@@ -87,6 +88,21 @@ struct PracticeResultsView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .padding(.horizontal)
+
+                // Leaving is the more likely intent after finishing a test, and the
+                // only other way out is the unlabelled system chevron.
+                Button {
+                    dismiss()
+                } label: {
+                    Label("Back to Home", systemImage: "house")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.secondary.opacity(0.12))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .padding(.horizontal)
+                .padding(.top, 8)
                 .padding(.bottom, 40)
             }
         }
