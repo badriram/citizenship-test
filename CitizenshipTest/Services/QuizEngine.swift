@@ -162,12 +162,22 @@ final class QuizEngine {
                 }
             }
 
+            // The model is additive, never subtractive: it can rescue an answer the
+            // heuristic wrongly rejects, but it cannot overturn one the heuristic
+            // accepts. A model mistake would otherwise tell a student who answered
+            // correctly that they were wrong, and teach them the wrong civics with a
+            // confident explanation attached.
+            let heuristicSaysCorrect = AnswerMatcher.check(userAnswer: userAnswer, acceptedAnswers: acceptedAnswers)
+
             if let grade = resolved {
-                isCorrect = grade.isCorrect
-                explanation = grade.explanation
+                isCorrect = heuristicSaysCorrect || grade.isCorrect
                 anyAIGrade = true
+                // Only show the model's reasoning when it agrees with the verdict;
+                // otherwise the row would read "correct" above prose explaining why
+                // it is wrong.
+                explanation = (grade.isCorrect == isCorrect) ? grade.explanation : nil
             } else {
-                isCorrect = AnswerMatcher.check(userAnswer: userAnswer, acceptedAnswers: acceptedAnswers)
+                isCorrect = heuristicSaysCorrect
             }
 
             if isCorrect { correct += 1 }
