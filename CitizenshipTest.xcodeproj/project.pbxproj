@@ -17,12 +17,15 @@
 		32E8CFCF098FD0CECF2B7827 /* PracticeTestFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED23D798B97F738F3BA72D1 /* PracticeTestFlowUITests.swift */; };
 		3FD0159F649FA5E4BBAAD677 /* CitizenshipTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F900A40C292CAA24B8F569 /* CitizenshipTestApp.swift */; };
 		4A44DFE87CEE56BB75482801 /* AIAnswerGrader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804887D7C8B0F398F8AE7FC /* AIAnswerGrader.swift */; };
+		50CB7C8BD2E6A66260439694 /* governors.json in Resources */ = {isa = PBXBuildFile; fileRef = 265F14B5D6ED214954BDDB95 /* governors.json */; };
 		533803002CE881940DB637E2 /* PracticeResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E07EF4E6B4FD6967CE196 /* PracticeResultsView.swift */; };
 		625FB48D027CA29B20FBFB11 /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B4A985C0527F733489352 /* QuestionsData.swift */; };
 		64C724B1906A4A0F3E53B36C /* StatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0066F760DDAB2F72CDBD0534 /* StatesData.swift */; };
 		653049E65E367532B758640E /* Executive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BE02741F2C9AD319A8995D /* Executive.swift */; };
 		69A078917FB008D3BE19C5F5 /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEEB643E9AE85010D86C53F /* CategoryFilterView.swift */; };
+		6BCF3BC023415A7D9A5595A5 /* legislators-current.json in Resources */ = {isa = PBXBuildFile; fileRef = 000EED82D4D5EFA31A520551 /* legislators-current.json */; };
 		6C94AE7FDC640A981A34A4B3 /* Legislator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC014BCD1A2F778A4C7AB7E /* Legislator.swift */; };
+		6FCEBD12FFBB71A3462180E4 /* executive.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B3700F0AF2A8E150B43BB11 /* executive.json */; };
 		71853FB11139A88B58FB5C29 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B528B8FA76E8F36559C98 /* InfoCardView.swift */; };
 		729952BB0D679E14298D4A14 /* FlashcardControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E7794C1D4EDCF1DC5E24FC /* FlashcardControlsView.swift */; };
 		79B5268AC0B8BAF93D19E717 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236C29A291140D5CC297849D /* ReviewListView.swift */; };
@@ -55,17 +58,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000EED82D4D5EFA31A520551 /* legislators-current.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "legislators-current.json"; sourceTree = "<group>"; };
 		0066F760DDAB2F72CDBD0534 /* StatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesData.swift; sourceTree = "<group>"; };
 		06E7794C1D4EDCF1DC5E24FC /* FlashcardControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardControlsView.swift; sourceTree = "<group>"; };
 		07A8ED4BCC3E4982372881BE /* QuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
 		09BE02741F2C9AD319A8995D /* Executive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executive.swift; sourceTree = "<group>"; };
 		0ED23D798B97F738F3BA72D1 /* PracticeTestFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTestFlowUITests.swift; sourceTree = "<group>"; };
 		236C29A291140D5CC297849D /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		265F14B5D6ED214954BDDB95 /* governors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = governors.json; sourceTree = "<group>"; };
 		32CECDFB322C0BA6E0F1D264 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FC014BCD1A2F778A4C7AB7E /* Legislator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legislator.swift; sourceTree = "<group>"; };
 		4E7EE8529358FC348A8D8748 /* String+FuzzyMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FuzzyMatch.swift"; sourceTree = "<group>"; };
 		5BA85CB83DB1651AC189D376 /* StateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfo.swift; sourceTree = "<group>"; };
 		628A465224C39E9D842362A0 /* FlashcardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardDeckView.swift; sourceTree = "<group>"; };
+		6B3700F0AF2A8E150B43BB11 /* executive.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = executive.json; sourceTree = "<group>"; };
 		6C5B4A985C0527F733489352 /* QuestionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsData.swift; sourceTree = "<group>"; };
 		6D2FDF8DF37BB2DB3EBB755F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		70146C9EE325AE0BBD2148D7 /* PracticeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTestView.swift; sourceTree = "<group>"; };
@@ -115,6 +121,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		62A346C170FD4146343ECECB /* data */ = {
+			isa = PBXGroup;
+			children = (
+				265F14B5D6ED214954BDDB95 /* governors.json */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		6320F4BBFA8596EA8D544632 /* PracticeTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +144,7 @@
 			children = (
 				AFE0BA585094A35CE7098C31 /* CitizenshipTest */,
 				8B5F2E40A4EDA39920AEAC3A /* CitizenshipTestUITests */,
+				62A346C170FD4146343ECECB /* data */,
 				B504381BC1D68FF802AA340E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				EA61DAC612C6A2591CA4C265 /* Assets.xcassets */,
+				6B3700F0AF2A8E150B43BB11 /* executive.json */,
+				000EED82D4D5EFA31A520551 /* legislators-current.json */,
 				58673C43DC849CA2083A507A /* Preview Content */,
 			);
 			path = Resources;
@@ -345,6 +362,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5DFF39631A85729CCC1E15 /* Assets.xcassets in Resources */,
+				6FCEBD12FFBB71A3462180E4 /* executive.json in Resources */,
+				50CB7C8BD2E6A66260439694 /* governors.json in Resources */,
+				6BCF3BC023415A7D9A5595A5 /* legislators-current.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

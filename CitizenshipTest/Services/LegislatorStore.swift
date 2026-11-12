@@ -6,12 +6,15 @@ final class LegislatorStore {
     private(set) var representatives: [String: String] = [:]   // "CA-12" → name
     private(set) var president: String?
     private(set) var vicePresident: String?
+    private(set) var governors: [String: String] = [:]          // state code → name
     private(set) var lastRefreshed: Date?
     private(set) var isLoading = false
     private(set) var loadError: String?
 
     private static let legislatorsURL = URL(string: "https://unitedstates.github.io/congress-legislators/legislators-current.json")!
     private static let executiveURL = URL(string: "https://unitedstates.github.io/congress-legislators/executive.json")!
+    // Governors are not in congress-legislators; this file is maintained in the app's own repo.
+    private static let governorsURL = URL(string: "https://raw.githubusercontent.com/badriram/citizenship-test/main/data/governors.json")!
     private static let staleDays = 14
 
     // Single in-flight refresh, so rapid successive callers coalesce onto one
@@ -26,6 +29,9 @@ final class LegislatorStore {
         }
         if let exURL = Bundle.main.url(forResource: "executive", withExtension: "json") {
             loadExecutive(from: exURL)
+        }
+        if let govURL = Bundle.main.url(forResource: "governors", withExtension: "json") {
+            loadGovernors(from: govURL)
         }
     }
 
@@ -51,6 +57,14 @@ final class LegislatorStore {
         isLoading = true
         loadError = nil
         defer { isLoading = false }
+
+        // Independent of the legislator feed: one source failing must not hold back the other.
+        if (try? await fetchAndCache(from: Self.governorsURL, cacheFileName: "governors.json")) != nil,
+           let govFile = cachedFileURL(named: "governors.json") {
+            loadGovernors(from: govFile)
+        } else if let govFile = cachedFileURL(named: "governors.json") {
+            loadGovernors(from: govFile)
+        }
 
         do {
             try await fetchAndCache(from: Self.legislatorsURL, cacheFileName: "legislators-current.json")
@@ -83,6 +97,11 @@ final class LegislatorStore {
         }
         // Fallback to StatesData
         return statesData.first { $0.id == stateCode }?.senators ?? []
+    }
+
+    func governorForState(_ stateCode: String) -> String? {
+        if let live = governors[stateCode] { return live }
+        return statesData.first { $0.id == stateCode }?.governor
     }
 
     func representativeForDistrict(state: String, district: Int) -> String? {
@@ -145,6 +164,15 @@ final class LegislatorStore {
         }
     }
 
+    private func loadGovernors(from url: URL) {
+        guard let data = try? Data(contentsOf: url),
+              let file = try? JSONDecoder().decode(GovernorsFile.self, from: data) else { return }
+        let names = file.governors.filter { !$0.value.trimmingCharacters(in: .whitespaces).isEmpty }
+        // A truncated or hand-mangled file should not replace a complete one.
+        guard names.count >= 50 else { return }
+        self.governors = names
+    }
+
     private nonisolated func fetchAndCache(from remoteURL: URL, cacheFileName: String) async throws {
         let (data, response) = try await URLSession.shared.data(from: remoteURL)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
@@ -166,4 +194,9 @@ final class LegislatorStore {
         let fileURL = cacheDir.appendingPathComponent(name)
         return FileManager.default.fileExists(atPath: fileURL.path) ? fileURL : nil
     }
+}
+
+private struct GovernorsFile: Decodable {
+    let updated: String
+    let governors: [String: String]
 }

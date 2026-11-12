@@ -20,11 +20,14 @@ targets:
         excludes:
           - "Resources/Preview Content"
           - "Resources/*.json"
-    resources:
-      - path: CitizenshipTest/Resources/Assets.xcassets
-      - path: CitizenshipTest/Resources/Preview Content
+      # XcodeGen has no target-level `resources:` key (it was silently ignored, so these
+      # never shipped); resource files are sources with an explicit build phase.
       - path: CitizenshipTest/Resources/legislators-current.json
+        buildPhase: resources
       - path: CitizenshipTest/Resources/executive.json
+        buildPhase: resources
+      - path: data/governors.json
+        buildPhase: resources
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES

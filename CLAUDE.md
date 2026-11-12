@@ -71,7 +71,8 @@ CitizenshipTest/
 - **Fallback chain**: Network → Disk cache (Caches/) → Bundle → StatesData.swift (hardcoded)
 - **Staleness**: Refreshes from GitHub if >14 days since last fetch
 - **Sources**: `unitedstates.github.io/congress-legislators/legislators-current.json` and `executive.json`
-- **Governor/Speaker/Chief Justice**: Stay hardcoded (not in congress-legislators data)
+- **Governors**: `data/governors.json` in this repo (not in congress-legislators), fetched from raw.githubusercontent.com on `main` by both the iOS app and the vericall-platform web study page, and bundled in the app. Hand-maintained; `.github/workflows/governors-check.yml` opens an issue weekly when Wikidata (P39 position held) shows a newer governor. Edit the file and bump `updated` when one is sworn in.
+- **Speaker/Chief Justice/capitals**: Stay hardcoded
 
 ### Answer Matching (OR logic)
 Answers are accepted if EITHER matcher succeeds:
@@ -94,4 +95,4 @@ Questions with `stateSpecific` key (`.senators`, `.governor`, `.capital`, `.repr
 - `UserSettings` is a SwiftData `@Model` with CloudKit sync — schema changes need migration consideration
 - Census Geocoder API is free/no-key but the congressional district key name changes each Congress session (handled by dynamic key lookup)
 - `NLEmbedding.sentenceEmbedding(for: .english)` returns nil on some simulators — semantic matcher gracefully returns false, fuzzy still works
-- The `project.yml` excludes `Resources/*.json` from sources but includes them explicitly as resources (prevents Xcode from compiling JSON as Swift)
+- `project.yml` excludes `Resources/*.json` from the main source glob and re-adds each JSON as a source with `buildPhase: resources`. XcodeGen has no target-level `resources:` key; one existed until 1.3 and was silently ignored, so the bundled JSON never shipped

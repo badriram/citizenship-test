@@ -42,7 +42,7 @@ struct Question: Identifiable, Hashable {
             }
             return state.senators
         case .governor:
-            return [state.governor]
+            return [legislators?.governorForState(state.id) ?? state.governor]
         case .capital:
             return [state.capital]
         case .representative:

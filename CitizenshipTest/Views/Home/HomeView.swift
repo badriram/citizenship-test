@@ -152,7 +152,7 @@ struct HomeView: View {
 
                     if let state = selectedState {
                         Divider()
-                        federalRow("Governor", state.governor)
+                        federalRow("Governor", legislatorStore.governorForState(state.id) ?? state.governor)
                         federalRow("Capital", state.capital)
                         let senators = legislatorStore.senatorsForState(state.id)
                         ForEach(senators, id: \.self) { senator in
